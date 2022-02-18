@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test_routes
+          uri: https://www.google.com
+          predicates:
+            - Query=url,google
+
+        - id: qq_routes
+          uri: https://www.youtube.com
+          predicates:
+            - Query=url,youtube
